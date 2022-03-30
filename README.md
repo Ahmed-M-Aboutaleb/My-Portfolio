@@ -8,7 +8,7 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
   <a href="https://github.com/Ahmed-M-Aboutaleb/My-Portfolio/blob/main/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/Ahmed-M-Aboutaleb/My Portfolio" />
+    <img alt="License: MIT" src="https://img.shields.io/github/license/Ahmed-M-Aboutaleb/My-Portfolio" />
   </a>
 </p>
 
