@@ -1,20 +1,38 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.1.2",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
-  },
-  "devDependencies": {
-    "eslint": "8.12.0",
-    "eslint-config-next": "12.1.2"
-  }
+    "name": "my-portfolio",
+    "version": "0.1.0",
+    "description": "Thats my portfolio frontend project.",
+    "author": "Ahmed-M-Aboutaleb",
+    "license": "MIT",
+    "homepage": "https://github.com/Ahmed-M-Aboutaleb/My-Portfolio#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ahmed-M-Aboutaleb/My-Portfolio.git"
+    },
+    "private": false,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "axios": "^0.26.1",
+        "formik": "^2.2.9",
+        "next": "12.1.2",
+        "react": "18.0.0",
+        "react-dom": "18.0.0",
+        "react-redux": "^7.2.6",
+        "redux": "^4.1.2",
+        "redux-devtools-extension": "^2.13.9",
+        "redux-thunk": "^2.4.1",
+        "yup": "^0.32.11"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.23",
+        "@types/react": "^17.0.43",
+        "eslint": "8.12.0",
+        "eslint-config-next": "12.1.2",
+        "typescript": "^4.6.3"
+    }
 }
