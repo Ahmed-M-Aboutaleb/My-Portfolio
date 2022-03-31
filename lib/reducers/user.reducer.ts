@@ -12,12 +12,8 @@ var initialState: UserState = {
 
 const ISSERVER = typeof window === 'undefined';
 if (!ISSERVER) {
-    if (localStorage.getItem('fireToken')) {
-        initialState = {
-            username: null,
-            token: localStorage.getItem('fireToken'),
-        };
-    }
+    const token = localStorage.getItem('fireToken');
+    token ? (initialState = { username: null, token: token }) : '';
 }
 
 export const userSlice = createSlice({
