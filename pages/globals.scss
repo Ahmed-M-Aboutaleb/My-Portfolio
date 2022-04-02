@@ -1,4 +1,9 @@
+@import 'normalize.scss';
+@import 'reset.scss';
+@import 'typography.scss';
+
 :root {
+    --font-size: 16px;
     --gray0: #f8f8f8;
     --gray1: #dbe1e8;
     --gray2: #b2becd;
@@ -9,21 +14,25 @@
 }
 
 body[data-theme='light'] {
-    --primary-color: hsl(212, 22%, 88%);
+    --primary-color: hsl(212, 21%, 88%);
     --secoundry-color: hsl(212, 22%, 98%);
     --primary-color-accent: hsl(346, 100%, 40%);
     --text-color: var(--gray6);
+    --h-color: var(--gray5);
     --cyan: hsl(197, 100%, 89%);
     --yellow: hsl(50, 91%, 64%);
+    --shadow: 0px 11px 22px #c4cad0;
 }
 
 body[data-theme='dark'] {
-    --primary-color: hsl(220, 9%, 6%);
+    --primary-color: hsl(220, 10%, 6%);
     --secoundry-color: hsl(220, 9%, 16%);
     --primary-color-accent: hsl(346, 90%, 40%);
     --text-color: var(--gray0);
+    --h-color: var(--gray2);
     --cyan: hsl(197, 90%, 89%);
     --yellow: hsl(50, 91%, 64%);
+    --shadow: 0px 11px 22px #08080a;
 }
 
 body {

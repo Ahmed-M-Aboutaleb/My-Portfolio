@@ -1,9 +1,13 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Image from 'next/image';
+import Main from '../layouts/main';
 export default function Home() {
-    const ThemeToggle = dynamic(() => import('../components/ThemeToggle'), {
-        ssr: false,
-    });
-    return <ThemeToggle />;
+    return (
+        <Main>
+            <div>
+                <h2>lol</h2>
+            </div>
+        </Main>
+    );
 }

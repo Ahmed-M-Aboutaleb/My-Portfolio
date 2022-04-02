@@ -1,20 +1,17 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 export interface UserState {
     username: string;
     token: string;
 }
 
+const token = useLocalStorage('fireToken', null);
+
 var initialState: UserState = {
     username: null,
-    token: null,
+    token: token,
 };
-
-const ISSERVER = typeof window === 'undefined';
-if (!ISSERVER) {
-    const token = localStorage.getItem('fireToken');
-    token ? (initialState = { username: null, token: token }) : '';
-}
 
 export const userSlice = createSlice({
     name: 'user',
