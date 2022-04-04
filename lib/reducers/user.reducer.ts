@@ -6,7 +6,13 @@ export interface UserState {
     token: string;
 }
 
-const token = useLocalStorage('fireToken', null);
+let token = null;
+
+const ISSERVER = typeof window === 'undefined';
+if (!ISSERVER) {
+    const itemGot = localStorage.getItem('fireToken');
+    itemGot ? (token = itemGot) : (token = null);
+}
 
 var initialState: UserState = {
     username: null,
