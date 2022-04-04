@@ -25,7 +25,7 @@ const NavbarItem: FC<navbarItem> = ({ icon, toggler, text, link }) => {
             {toggler ? (
                 <div onClick={() => setTheme()} className={styles.item}>
                     <FontAwesomeIcon
-                        icon={activeTheme == 'dark' ? faSun : faMoonStars}
+                        icon={activeTheme === 'dark' ? faSun : faMoonStars}
                     />
                     <span className={styles.text}>{text}</span>
                 </div>

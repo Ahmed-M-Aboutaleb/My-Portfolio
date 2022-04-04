@@ -1,11 +1,20 @@
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import { FC } from 'react';
-import Navbar from '../components/Navbar';
 
-const Main: FC = ({ children }) => {
+const Main: FC<{ title?: string }> = ({ title, children }) => {
+    const Navbar = dynamic(() => import('../components/Navbar'), {
+        ssr: false,
+    });
     return (
         <>
+            <Head>
+                <title>
+                    {title ? `Ahmed Mohamed - ${title}` : 'Ahmed Mohamed'}
+                </title>
+            </Head>
             <Navbar />
-            {children}
+            <main className={'container'}>{children}</main>
         </>
     );
 };

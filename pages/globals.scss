@@ -4,6 +4,7 @@
 
 :root {
     --font-size: 16px;
+    --nav-height: 10vh;
     --gray0: #f8f8f8;
     --gray1: #dbe1e8;
     --gray2: #b2becd;
@@ -16,27 +17,59 @@
 body[data-theme='light'] {
     --primary-color: hsl(212, 21%, 88%);
     --secoundry-color: hsl(212, 22%, 98%);
-    --primary-color-accent: hsl(346, 100%, 40%);
+    --primary-color-accent: hsl(218, 96%, 64%);
     --text-color: var(--gray6);
+    --text-color-darker: var(--gray3);
     --h-color: var(--gray5);
     --cyan: hsl(197, 100%, 89%);
     --yellow: hsl(50, 91%, 64%);
     --shadow: 0px 11px 22px #c4cad0;
+    --clay: 35px 35px 68px 0px rgba(199, 239, 255, 0.5),
+        inset -8px -8px 16px 0px rgba(199, 239, 255, 0.6),
+        inset 0px 11px 28px 0px rgb(255, 255, 255);
+    --glass-background: rgba(249, 250, 251, 0.25);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+    --gradient-1: #ffffff;
+    --gradient-2: #b9b9b9;
+    --gradient-3: #b3b3b3;
+    --input-hover: var(--gray2);
 }
 
 body[data-theme='dark'] {
     --primary-color: hsl(220, 10%, 6%);
-    --secoundry-color: hsl(220, 9%, 16%);
-    --primary-color-accent: hsl(346, 90%, 40%);
+    --secoundry-color: hsl(214, 9%, 16%);
+    --third-color: hsl(214, 9%, 26%);
+    --primary-color-accent: hsl(218, 96%, 54%);
     --text-color: var(--gray0);
+    --text-color-darker: var(--gray3);
     --h-color: var(--gray2);
     --cyan: hsl(197, 90%, 89%);
     --yellow: hsl(50, 91%, 64%);
     --shadow: 0px 11px 22px #08080a;
+    --clay-shadow: 35px 35px 68px 0px rgb(12 15 17 / 50%),
+        inset -8px -8px 16px 0px rgb(14 15 17 / 60%),
+        inset 0px 11px 28px 0px rgb(35 35 43);
+    --glass-background: rgb(37 40 44 / 25%);
+    --glass-shadow: 0 8px 32px 0 rgb(13 18 24 / 17%);
+    --glass-border: 1px solid rgb(0 0 0 / 18%);
+    --gradient-1: #1b2028;
+    --gradient-2: #0c111a;
+    --gradient-3: #000;
+    --input-hover: var(--gray4);
 }
 
 body {
-    background: var(--primary-color, #dbe1e8);
-    color: var(--text-color, --gray8);
+    background: hsl(220, 10%, 6%);
+    background: var(--primary-color, hsl(220, 10%, 6%));
+    color: #f8f8f8;
+    color: var(--text-color, --gray0);
     transition: background 0.25s ease-in-out;
+}
+
+.container {
+    margin-top: 10vh;
+    margin-top: var(--nav-height);
+    height: 100%;
+    padding: 1em;
 }
